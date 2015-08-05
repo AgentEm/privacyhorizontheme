@@ -491,6 +491,9 @@ a {
     text-align: center; }
   .main-navigation a {
     text-decoration: none; }
+  .main-navigation .menu-item img._before {
+    display: block;
+    margin: 0 auto; }
 
 /* Small menu. */
 /* .menu-toggle,
