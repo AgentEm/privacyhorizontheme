@@ -487,13 +487,16 @@ a {
   .main-navigation ul {
     list-style: none;
     margin: 0;
-    padding: 0;
-    text-align: center; }
+    padding: 0; }
   .main-navigation a {
-    text-decoration: none; }
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    padding: 1em 2em; }
   .main-navigation .menu-item img._before {
     display: block;
-    margin: 0 auto; }
+    margin: 0 auto;
+    padding-bottom: 0.5em; }
 
 /* Small menu. */
 /* .menu-toggle,
@@ -646,6 +649,13 @@ a {
 .page-links {
   clear: both;
   margin: 0 0 1.5em; }
+
+body.home {
+  background: url(images/homepage/backgroundimage.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
 
 /*--------------------------------------------------------------
 ## Asides
