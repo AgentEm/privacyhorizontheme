@@ -287,8 +287,7 @@ big {
 # Elements
 --------------------------------------------------------------*/
 html {
-  box-sizing: border-box;
-  height: 100%; }
+  box-sizing: border-box; }
 
 *,
 *:before,
@@ -298,9 +297,7 @@ html {
 
 body {
   background: #fff;
-  /* Fallback for when there is no custom background color defined. */
-  position: relative;
-  height: 100%; }
+  /* Fallback for when there is no custom background color defined. */ }
 
 blockquote, q {
   quotes: "" ""; }
@@ -429,10 +426,13 @@ a {
 ## Menus
 --------------------------------------------------------------*/
 .main-navigation {
-  float: right;
   width: 10%;
+  height: 100%;
   background-color: #F2Cd65;
-  min-height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  overflow-y: scroll;
   /* 	ul {
   	display: none;
   	list-style: none;
@@ -658,6 +658,9 @@ a {
   clear: both;
   margin: 0 0 1.5em; }
 
+.hfeed {
+  width: 90%; }
+
 body.home {
   background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url(images/homepage/backgroundimage.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -683,16 +686,9 @@ body.home {
     body.home .entry-content p {
       margin: 0;
       padding: 0; }
-  body.home .hfeed {
-    float: left;
-    height: 100%;
-    width: 90%; }
 
 .site-header, .site-footer {
   text-align: left; }
-
-.site-footer {
-  clear: both; }
 
 /*--------------------------------------------------------------
 ## Asides

@@ -27,6 +27,13 @@
 	margin: 0 0 1.5em;
 }
 
+.hfeed {
+	//content of the page that isn't the nav, nav is set to float right and 10% width
+	// float: left;
+	// min-height: 100%;
+	width: 90%;
+}
+
 //HOMEPAGE
 body.home {
   background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url(images/homepage/backgroundimage.jpg) no-repeat center center fixed;
@@ -57,16 +64,8 @@ body.home {
 			padding: 0;
 		}
 	}
-	.hfeed {
-		float: left;
-		height: 100%;
-		width: 90%;
-	}
 }
 
 .site-header, .site-footer {
 	text-align: left;
-}
-.site-footer {
-	clear: both;
 }

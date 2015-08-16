@@ -15,7 +15,6 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
-			<p>Custom Wordpress theme by <a href="http://emilyporta.com" target="_blank">Emily Porta</a></p>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
