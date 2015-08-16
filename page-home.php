@@ -20,18 +20,21 @@ get_header(); ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
 				<?php get_template_part( 'template-parts/content', 'page' ); ?>
-				
-				<?php
-					// If comments are open or we have at least one comment, load up the comment template.
-					if ( comments_open() || get_comments_number() ) :
-						comments_template();
-					endif;
-				?>
+        <div class="home-badge">
+        	<img src="<?php echo get_bloginfo('template_url') ?>/images/homepage/people.svg"/>
+        </div>
+				<div class="home-badge">
+					<img src="<?php echo get_bloginfo('template_url') ?>/images/homepage/light.svg"/>
+				</div>
+				<div class="home-badge">
+						<img src="<?php echo get_bloginfo('template_url') ?>/images/homepage/badge.svg"/>
+				</div>
 
 			<?php endwhile; // End of the loop. ?>
+
+<?php if(function_exists('ditty_news_ticker')){ditty_news_ticker(45);} ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

@@ -28,9 +28,6 @@
 }
 
 .hfeed {
-	//content of the page that isn't the nav, nav is set to float right and 10% width
-	// float: left;
-	// min-height: 100%;
 	width: 90%;
 }
 
@@ -51,6 +48,10 @@ body.home {
 		margin: 0;
 		margin-top: 1.5em;
 		margin-bottom: 0.5em;
+		@media (max-width: 1300px) {
+			font-size: 4rem;
+			margin-top: 1em;
+		}
 	}
 
 	.entry-content { //the subheading with the way I'm using it
@@ -59,13 +60,49 @@ body.home {
 		max-width: 1000px;
 		margin: 0 auto;
 		line-height: 1.3;
+		@media (max-width: 1300px) {
+			font-size: 1.75rem;
+		}
 		p {
 			margin: 0;
 			padding: 0;
 		}
 	}
+	.home-badge {
+		display: inline-block;
+		padding: 3rem 5%;
+		@media (max-width: 1300px) {
+			width: 30%;
+		}
+	}
 }
 
-.site-header, .site-footer {
+.site-header {
 	text-align: left;
+}
+
+.mtphr-dnt {
+	width: 65%;
+	margin: 0 auto;
+	font-size: 1.5rem;
+	a {
+		color: #fff;
+		text-decoration: none;
+	}
+}
+.mtphr-dnt-tick-contents {
+	padding: 0 5rem;
+}
+.mtphr-dnt-icon-arrow-left, .mtphr-dnt-icon-arrow-right {
+	width: 47px !important;
+	height: 47px !important;
+	&:before {
+		display: none;
+	}
+}
+.mtphr-dnt-icon-arrow-left {
+		background: url(images/homepage/leftarrow.svg) no-repeat;
+}
+.mtphr-dnt-icon-arrow-right {
+		background: url(images/homepage/rightarrow.svg) no-repeat;
 }

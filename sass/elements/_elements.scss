@@ -1,5 +1,14 @@
 html {
 	box-sizing: border-box;
+	@media (max-width: 1300px) { //regular desktop
+		border: 1px solid red;
+	}
+	@media (max-width: 782px) { //tablet
+		border: 1px solid green;
+	}
+	@media (max-width: 400px) { //small mobile
+		border: 1px solid blue;
+	}
 }
 
 *,
