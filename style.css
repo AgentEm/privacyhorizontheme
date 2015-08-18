@@ -48,6 +48,9 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @font-face {
   font-family: "CooperHewitt-Semibold";
   src: url(fonts/CooperHewitt-Semibold.otf); }
+@font-face {
+  font-family: "CooperHewitt-Light";
+  src: url(fonts/CooperHewitt-Light.otf); }
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
@@ -435,8 +438,7 @@ a {
 ## Menus
 --------------------------------------------------------------*/
 .main-navigation {
-  width: 10%;
-  max-width: 10rem;
+  width: 8%;
   padding: 1rem 0;
   height: 100%;
   background-color: #F2Cd65;
@@ -670,7 +672,7 @@ a {
   margin: 0 0 1.5em; }
 
 .hfeed {
-  width: 90%; }
+  width: 92%; }
 
 body.home {
   background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url(images/homepage/backgroundimage.jpg) no-repeat center center fixed;
@@ -714,6 +716,13 @@ body.home {
 .site-header {
   text-align: left; }
 
+.site-footer {
+  background-color: #21BEE9;
+  text-align: center; }
+  .site-footer img {
+    padding: 0.625rem 4.375rem;
+    vertical-align: bottom; }
+
 .mtphr-dnt {
   width: 65%;
   margin: 0 auto;
@@ -736,6 +745,50 @@ body.home {
 
 .mtphr-dnt-icon-arrow-right {
   background: url(images/homepage/rightarrow.svg) no-repeat; }
+
+#content .rotatingtweets {
+  border: none;
+  margin-bottom: 0;
+  padding: 0; }
+
+.about-page .about-content-container {
+  width: 70%;
+  margin: 0 auto; }
+  @media (max-width: 1300px) {
+    .about-page .about-content-container {
+      width: 85%; } }
+  @media (max-width: 782px) {
+    .about-page .about-content-container {
+      width: 95%; } }
+.about-page .site-intro, .about-page .brendan-bio {
+  text-align: center; }
+  .about-page .site-intro h3, .about-page .brendan-bio h3 {
+    font-size: 2.25rem; }
+  .about-page .site-intro p, .about-page .brendan-bio p {
+    font-size: 1.875rem;
+    font-family: "CooperHewitt-Light", serif; }
+.about-page .site-intro {
+  color: #8D8D8D; }
+  .about-page .site-intro h2 {
+    font-family: "CooperHewitt-Semibold", serif;
+    color: #F15A5A;
+    font-size: 3.75rem;
+    margin-top: 0; }
+  .about-page .site-intro .navigate-down {
+    font-size: 1.25rem;
+    color: #F15A5A; }
+.about-page .brendan-bio {
+  color: #fff;
+  background: linear-gradient(rgba(241, 90, 90, 0.8), rgba(241, 90, 90, 0.8)), url(images/about/aboutphoto.jpg) no-repeat center top;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+  .about-page .brendan-bio a {
+    color: #fff;
+    text-decoration: none; }
+    .about-page .brendan-bio a:hover, .about-page .brendan-bio a:focus {
+      color: #e6e6e6; }
 
 /*--------------------------------------------------------------
 ## Asides

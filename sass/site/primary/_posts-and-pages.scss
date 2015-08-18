@@ -28,10 +28,13 @@
 }
 
 .hfeed {
-	width: 90%;
+	width: 92%;
 }
 
+//********
 //HOMEPAGE
+//********
+
 body.home {
   background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url(images/homepage/backgroundimage.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -80,7 +83,16 @@ body.home {
 .site-header {
 	text-align: left;
 }
+.site-footer {
+	background-color: $color__lightblue;
+	text-align: center;
+	img {
+		padding: 0.625rem 4.375rem;
+		vertical-align: bottom;
+	}
+}
 
+//DITTY NEWS TICKER OVERRIDES
 .mtphr-dnt {
 	width: 65%;
 	margin: 0 auto;
@@ -90,8 +102,6 @@ body.home {
 		text-decoration: none;
 	}
 }
-
-//DITTY NEWS TICKER OVERRIDES
 .mtphr-dnt-tick-contents {
 	padding: 0 5rem;
 }
@@ -107,4 +117,67 @@ body.home {
 }
 .mtphr-dnt-icon-arrow-right {
 		background: url(images/homepage/rightarrow.svg) no-repeat;
+}
+
+//********
+//ABOUT PAGE
+//********
+
+//ROTATING TWEETS WIDGET OVERRIDES
+//keep this outside of .about-page below, doesn't work if it's in there
+#content .rotatingtweets {
+	border: none;
+	margin-bottom: 0;
+	padding: 0;
+}
+
+.about-page {
+	.about-content-container {
+		width: 70%;
+		margin: 0 auto;
+		@media (max-width: 1300px) {
+			width: 85%;
+		}
+		@media (max-width: 782px) {
+			width: 95%;
+		}
+	}
+	.site-intro, .brendan-bio {
+		text-align: center;
+		h3 {
+			font-size: 2.25rem;
+		}
+		p {
+			font-size: 1.875rem;
+			font-family: $font__subheading;
+		}
+	}
+	.site-intro {
+		color: $color__text-dark;
+		h2 {
+			font-family: $font__heading;
+			color: $color__pink;
+			font-size: 3.75rem;
+			margin-top: 0;
+		}
+		.navigate-down {
+			font-size: 1.25rem;
+			color: $color__pink;
+		}
+	}
+	.brendan-bio {
+		color: #fff;
+		background: linear-gradient(rgba(241, 90, 90, 0.8), rgba(241, 90, 90, 0.8)), url(images/about/aboutphoto.jpg) no-repeat center top;
+	  -webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;
+		a {
+			color: #fff;
+			text-decoration: none;
+			&:hover, &:focus {
+				color: darken(#fff, 10);
+			}
+		}
+	}
 }
