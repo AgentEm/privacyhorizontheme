@@ -1,12 +1,12 @@
 html {
 	box-sizing: border-box;
-	@media (max-width: 1300px) { //regular desktop
+	@media (max-width: 1300px) { //783 to 1300px, regular desktop
 		border: 1px solid red;
 	}
-	@media (max-width: 782px) { //tablet
+	@media (max-width: 782px) { //401 to 782px, tablet
 		border: 1px solid green;
 	}
-	@media (max-width: 400px) { //small mobile
+	@media (max-width: 400px) { //up to 400px, small mobile
 		border: 1px solid blue;
 	}
 }

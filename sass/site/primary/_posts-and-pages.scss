@@ -146,10 +146,16 @@ body.home {
 		text-align: center;
 		h3 {
 			font-size: 2.25rem;
+			@media (max-width: 1300px) {
+				font-size: 2.25rem - 0.25rem;
+			}
 		}
 		p {
 			font-size: 1.875rem;
 			font-family: $font__subheading;
+			@media (max-width: 1300px) {
+				font-size: 1.875rem - 0.25rem;
+			}
 		}
 	}
 	.site-intro {
@@ -159,10 +165,16 @@ body.home {
 			color: $color__pink;
 			font-size: 3.75rem;
 			margin-top: 0;
+			@media (max-width: 1300px) {
+				font-size: 3.75rem - 0.25rem;
+			}
 		}
 		.navigate-down {
 			font-size: 1.25rem;
 			color: $color__pink;
+			@media (max-width: 1300px) {
+				font-size: 1.25rem - 0.25rem;
+			}
 		}
 	}
 	.brendan-bio {
