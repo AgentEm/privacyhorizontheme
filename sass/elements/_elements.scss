@@ -1,3 +1,12 @@
+*,
+*:before,
+*:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+	box-sizing: inherit;
+}
+html, body {
+	min-height: 100%;
+}
+
 html {
 	box-sizing: border-box;
 	@media (max-width: 1300px) { //783 to 1300px, regular desktop
@@ -9,12 +18,6 @@ html {
 	@media (max-width: 400px) { //up to 400px, small mobile
 		border: 1px solid blue;
 	}
-}
-
-*,
-*:before,
-*:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
-	box-sizing: inherit;
 }
 
 body {
@@ -46,6 +49,10 @@ img {
 
 h1 {
 	margin: 1em;
+}
+
+a, a:active, a:focus {
+	outline: none !important;
 }
 
 @import "tables";

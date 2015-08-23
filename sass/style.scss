@@ -33,6 +33,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Accessibility
 # Alignments
 # Clearings
+# Animations
 # Widgets
 # Content
     ## Posts and pages
@@ -85,6 +86,11 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Clearings
 --------------------------------------------------------------*/
 @import "modules/clearings";
+
+/*--------------------------------------------------------------
+# Animations
+--------------------------------------------------------------*/
+@import "modules/animations";
 
 /*--------------------------------------------------------------
 # Widgets

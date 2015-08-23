@@ -78,6 +78,9 @@ body.home {
 			width: 30%;
 		}
 	}
+	.site-footer {
+		display: none;
+	}
 }
 
 .site-header {
@@ -127,10 +130,18 @@ body.home {
 //keep this outside of .about-page below, doesn't work if it's in there
 #content .rotatingtweets {
 	border: none;
-	margin-bottom: 0;
 	padding: 0;
+	padding-bottom: 8.75rem;
+	margin: 0 !important;
 }
-
+.contain-tweets {
+	width: 60%;
+	max-width: 60rem;
+	margin: 0 auto;
+	@media (max-width: 782px) {
+		width: 100%;
+	}
+}
 .about-page {
 	.about-content-container {
 		width: 70%;
@@ -170,11 +181,16 @@ body.home {
 			}
 		}
 		.navigate-down {
+			margin: 0;
 			font-size: 1.25rem;
 			color: $color__pink;
 			@media (max-width: 1300px) {
 				font-size: 1.25rem - 0.25rem;
 			}
+		}
+		.about-down-arrow {
+			margin-bottom: 2rem;
+			padding: 2.5rem;
 		}
 	}
 	.brendan-bio {
@@ -190,6 +206,18 @@ body.home {
 			&:hover, &:focus {
 				color: darken(#fff, 10);
 			}
+		}
+		.bio-header {
+			margin: 0;
+			padding-top: 11.25rem;
+			padding-bottom: 3.125rem;
+		}
+		p {
+			margin: 0;
+			padding-bottom: 5rem;
+		}
+		.rotatingtweets p {
+		font-size: 1.375rem;
 		}
 	}
 }

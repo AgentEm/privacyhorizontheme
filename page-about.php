@@ -14,22 +14,25 @@
 						<p class="navigate-down">
 							How did Privacy Horizon start?
 						</p>
-						<div class="about-down-arrow">
-								<img src="<?php echo get_bloginfo('template_url') ?>/images/about/downarrow.svg"/>
+						<a href="#bio"><div class="about-down-arrow">
+								<img src="<?php echo get_bloginfo('template_url') ?>/images/about/downarrow.svg" class="animated bounce"/>
 						</div>
+						</a>
 					</div>
         </section>
 
-        <section class="brendan-bio">
+        <section class="brendan-bio" id="bio">
 					<div class="about-content-container">
 						<h3 class="bio-header">I'm Brendan Seaton, the creator of Privacy Horizon. I'm the President of ITAC Health, an insturctor for eHealthRisk at NIHI, as well as a privacy, security, safety, and risk management consultant.</h3>
 						<p>I created this site to lorem ipsum chages the way provacy is viewed. Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
 						<div class="about-twitter-bird-container">
-								<img src="<?php echo get_bloginfo('template_url') ?>/images/about/twitterbird.svg"/>
+								<a href="http://twitter.com/brendanseaton" target="_blank"><img src="<?php echo get_bloginfo('template_url') ?>/images/about/twitterbird.svg"/></a>
 						</div>
-						<?php
-							echo do_shortcode("[rotatingtweets screen_name='brendanseaton' exclude_replies='1' timeout='7000' rotation_type='fade' show_tco_link='1' show_meta_timestamp='0' show_meta_screen_name='0' show_meta_via='0' show_meta_reply_retweet_favorite='1']");
-						?>
+						<div class="contain-tweets">
+							<?php
+								echo do_shortcode("[rotatingtweets screen_name='brendanseaton' exclude_replies='1' timeout='7000' rotation_type='fade' show_tco_link='1' show_meta_timestamp='0' show_meta_screen_name='0' show_meta_via='0' show_meta_reply_retweet_favorite='1']");
+							?>
+						</div>
 					</div>
         </section>
 			<?php endwhile; // End of the loop. ?>

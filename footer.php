@@ -12,7 +12,6 @@
 ?>
 
 	</div><!-- #content -->
-
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
 			<img src="<?php echo get_bloginfo('template_url') ?>/images/socialmediaicons/twittericon.svg"/>
