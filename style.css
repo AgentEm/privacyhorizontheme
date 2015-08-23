@@ -2859,6 +2859,54 @@ Copyright (c) 2015 Daniel Eden
 .hfeed {
   width: 92%; }
 
+.site-header {
+  text-align: left; }
+
+.site-title {
+  margin: 0;
+  padding: 1.5rem; }
+
+.site-footer {
+  background-color: #21BEE9;
+  text-align: center; }
+  .site-footer img {
+    padding: 0.625rem 4.375rem;
+    vertical-align: bottom; }
+
+.page-content-container {
+  width: 70%;
+  margin: 0 auto; }
+  @media (max-width: 1300px) {
+    .page-content-container {
+      width: 85%; } }
+  @media (max-width: 782px) {
+    .page-content-container {
+      width: 95%; } }
+
+section {
+  color: #8D8D8D;
+  text-align: center; }
+  section h2 {
+    font-family: "CooperHewitt-Semibold", serif;
+    color: #F15A5A;
+    font-size: 3.75rem;
+    margin-top: 0; }
+    @media (max-width: 1300px) {
+      section h2 {
+        font-size: 3.5rem; } }
+  section h3 {
+    font-size: 2.25rem;
+    margin: 0; }
+    @media (max-width: 1300px) {
+      section h3 {
+        font-size: 2rem; } }
+  section p {
+    font-size: 1.875rem;
+    font-family: "CooperHewitt-Light", serif; }
+    @media (max-width: 1300px) {
+      section p {
+        font-size: 1.625rem; } }
+
 body.home {
   background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url(images/homepage/backgroundimage.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -2900,16 +2948,6 @@ body.home {
   body.home .site-footer {
     display: none; }
 
-.site-header {
-  text-align: left; }
-
-.site-footer {
-  background-color: #21BEE9;
-  text-align: center; }
-  .site-footer img {
-    padding: 0.625rem 4.375rem;
-    vertical-align: bottom; }
-
 .mtphr-dnt {
   width: 65%;
   margin: 0 auto;
@@ -2947,72 +2985,49 @@ body.home {
     .contain-tweets {
       width: 100%; } }
 
-.about-page .about-content-container {
-  width: 70%;
-  margin: 0 auto; }
+.about-page section.site-intro .navigate-down {
+  margin: 0;
+  font-size: 1.25rem;
+  color: #F15A5A; }
   @media (max-width: 1300px) {
-    .about-page .about-content-container {
-      width: 85%; } }
-  @media (max-width: 782px) {
-    .about-page .about-content-container {
-      width: 95%; } }
-.about-page .site-intro, .about-page .brendan-bio {
-  text-align: center; }
-  .about-page .site-intro h3, .about-page .brendan-bio h3 {
-    font-size: 2.25rem; }
-    @media (max-width: 1300px) {
-      .about-page .site-intro h3, .about-page .brendan-bio h3 {
-        font-size: 2rem; } }
-  .about-page .site-intro p, .about-page .brendan-bio p {
-    font-size: 1.875rem;
-    font-family: "CooperHewitt-Light", serif; }
-    @media (max-width: 1300px) {
-      .about-page .site-intro p, .about-page .brendan-bio p {
-        font-size: 1.625rem; } }
-.about-page .site-intro {
-  color: #8D8D8D; }
-  .about-page .site-intro h2 {
-    font-family: "CooperHewitt-Semibold", serif;
-    color: #F15A5A;
-    font-size: 3.75rem;
-    margin-top: 0; }
-    @media (max-width: 1300px) {
-      .about-page .site-intro h2 {
-        font-size: 3.5rem; } }
-  .about-page .site-intro .navigate-down {
-    margin: 0;
-    font-size: 1.25rem;
-    color: #F15A5A; }
-    @media (max-width: 1300px) {
-      .about-page .site-intro .navigate-down {
-        font-size: 1rem; } }
-  .about-page .site-intro .about-down-arrow {
-    margin-bottom: 2rem;
-    padding: 2.5rem; }
-.about-page .brendan-bio {
+    .about-page section.site-intro .navigate-down {
+      font-size: 1rem; } }
+.about-page section.site-intro .about-down-arrow {
+  margin-bottom: 2rem;
+  padding: 2.5rem; }
+.about-page section.brendan-bio {
   color: #fff;
   background: linear-gradient(rgba(241, 90, 90, 0.8), rgba(241, 90, 90, 0.8)), url(images/about/aboutphoto.jpg) no-repeat center top;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover; }
-  .about-page .brendan-bio a {
+  .about-page section.brendan-bio a {
     color: #fff;
     text-decoration: none; }
-    .about-page .brendan-bio a:hover, .about-page .brendan-bio a:focus {
+    .about-page section.brendan-bio a:hover, .about-page section.brendan-bio a:focus {
       color: #e6e6e6; }
-  .about-page .brendan-bio .bio-header {
+  .about-page section.brendan-bio .bio-header {
     margin: 0;
     padding-top: 11.25rem;
     padding-bottom: 3.125rem; }
-  .about-page .brendan-bio p {
+  .about-page section.brendan-bio p {
     margin: 0;
     padding-bottom: 5rem; }
-  .about-page .brendan-bio .rotatingtweets .rtw_main {
+  .about-page section.brendan-bio .rotatingtweets .rtw_main {
     font-size: 1.375rem;
     padding-bottom: 0 !important; }
-  .about-page .brendan-bio .rotatingtweets .rtw_meta {
+  .about-page section.brendan-bio .rotatingtweets .rtw_meta {
     font-size: 1rem; }
+
+.site-header-alternate {
+  background: url(images/contact/contactimage.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+  .site-header-alternate section.top-section h2, .site-header-alternate section.top-section h3 {
+    color: #fff; }
 
 /*--------------------------------------------------------------
 ## Asides

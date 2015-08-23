@@ -6,8 +6,8 @@
 			<?php while ( have_posts() ) : the_post(); ?>
 
 				<?php// get_template_part( 'template-parts/content', 'page' ); ?>
-        <section class="site-intro">
-					<div class="about-content-container">
+        <section class="top-section site-intro">
+					<div class="page-content-container">
 						<h2>Hello and welcome!</h2>
 						<h3>Thank you for visiting Privacy Horizon. I hope you find what you are looking for. This is a resource designed for young professionals, IT startups, and privacy offivers to learn how to build privacy into their products and services.</h3>
 						<p>Privacy Horizon aims to...Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -22,7 +22,7 @@
         </section>
 
         <section class="brendan-bio" id="bio">
-					<div class="about-content-container">
+					<div class="page-content-container">
 						<h3 class="bio-header">I'm Brendan Seaton, the creator of Privacy Horizon. I'm the President of ITAC Health, an insturctor for eHealthRisk at NIHI, as well as a privacy, security, safety, and risk management consultant.</h3>
 						<p>I created this site to lorem ipsum chages the way provacy is viewed. Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
 						<div class="about-twitter-bird-container">
