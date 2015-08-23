@@ -3028,6 +3028,8 @@ body.home {
   background-size: cover; }
   .site-header-alternate section.top-section h2, .site-header-alternate section.top-section h3 {
     color: #fff; }
+  .site-header-alternate section.top-section h3 {
+    padding-bottom: 4rem; }
 
 /*--------------------------------------------------------------
 ## Asides

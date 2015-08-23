@@ -7,9 +7,9 @@
 
         <section class="contact-form" id="form">
 					<div class="page-content-container">
-            <form class="" action="index.html" method="post">
-
-            </form>
+            <?php
+              if( function_exists( 'ninja_forms_display_form' ) ){ ninja_forms_display_form( 5 ); }
+            ?>
 					</div>
         </section>
 			<?php endwhile; // End of the loop. ?>
