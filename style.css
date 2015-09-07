@@ -3031,6 +3031,50 @@ body.home {
   .site-header-alternate section.top-section h3 {
     padding-bottom: 4rem; }
 
+.ninja-forms-all-fields-wrap {
+  max-width: 1050px;
+  margin: 0 auto; }
+
+.field-wrap:not(.textarea-wrap) {
+  margin: 0 0.5rem;
+  display: inline-block;
+  width: 30%;
+  max-width: 20.875rem; }
+
+.text-wrap.label-above label, .textarea-wrap.label-above label {
+  display: none !important; }
+
+.ninja-forms-form-wrap input, .ninja-forms-form-wrap select, .ninja-forms-form-wrap textarea {
+  height: 2.5rem !important;
+  border-radius: 0;
+  background: #f3f3f3;
+  border: 1px solid #d9d9d9;
+  padding: 1rem; }
+
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+  width: 100% !important;
+  max-width: 20.875rem !important;
+  color: #fff;
+  background: #F15A5A;
+  box-shadow: none;
+  font-size: 1rem;
+  text-shadow: none;
+  border: none; }
+  button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover {
+    border: none;
+    box-shadow: none; }
+
+input.ninja-forms-field:not(#ninja_forms_field_12), select.ninja-forms-field {
+  color: #979797;
+  padding: 0.7rem 1rem; }
+
+.ninja-forms-form-wrap textarea {
+  min-height: 200px;
+  padding: 1rem;
+  width: 100%;
+  max-width: 58.7rem;
+  color: #979797; }
+
 /*--------------------------------------------------------------
 ## Asides
 --------------------------------------------------------------*/

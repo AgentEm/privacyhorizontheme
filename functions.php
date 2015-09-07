@@ -130,6 +130,9 @@ function privacyhorisontheme_scripts() {
 		wp_register_script( 'privacyhorisontheme-smoothscroll', get_template_directory_uri() . '/js/smoothscroll.js' );
 		wp_enqueue_script( 'privacyhorisontheme-smoothscroll', get_template_directory_uri() . '/js/smoothscroll.js', array(), '4.2.4', true );
 
+		wp_register_script( 'privacyhorisontheme-form', get_template_directory_uri() . '/js/form.js' );
+		wp_enqueue_script( 'privacyhorisontheme-form', get_template_directory_uri() . '/js/form.js', array(), '0', true );
+
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
