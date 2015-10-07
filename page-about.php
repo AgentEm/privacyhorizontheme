@@ -9,10 +9,19 @@
         <section class="top-section site-intro">
 					<div class="page-content-container">
 						<h2>Hello and welcome!</h2>
-						<h3>Thank you for visiting Privacy Horizon. I hope you find what you are looking for. This is a resource designed for young professionals, IT startups, and privacy officers to learn how to build privacy into their products and services.</h3>
-						<p>Privacy Horizon aims to...Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+						<h3>Privacy Horizon is a global resource for start-ups, small, and medium sized organizations.  While focusing on local requirements, it taps into privacy and cybersecurity best practices from around the world.</h3>
+						<p>Privacy Horizon’s “Virtual Privacy Officer” provides:</p>
+						<ul class="about-list">
+							<li><strong>Training</strong> for you and your organization on a variety of privacy and cybersecurity topics.</li>
+							<li><strong>Tools</strong> to help you assess privacy risk and manage your privacy program.</li>
+							<li><strong>Resources</strong> to help you research and handle your unique privacy challenges.</li>
+							<li><strong>Coaching and professional services</strong> for those situations where you need some objective outside help.</li>
+						</ul>
+						<p>
+							The Virtual Privacy Officer is supported by real live IAPP (International Association of Privacy Professionals) certified privacy specialists.
+						</p>
 						<p class="navigate-down">
-							How did Privacy Horizon start?
+							Who’s behind this operation?
 						</p>
 						<a href="#bio"><div class="about-down-arrow">
 								<img src="<?php echo get_bloginfo('template_url') ?>/images/about/downarrow.svg" class="animated bounce"/>
@@ -23,8 +32,13 @@
 
         <section class="brendan-bio" id="bio">
 					<div class="page-content-container">
-						<h3 class="bio-header">I'm Brendan Seaton, the creator of Privacy Horizon. I'm the President of ITAC Health, an instructor for eHealthRisk at NIHI, as well as a privacy, security, safety, and risk management consultant.</h3>
-						<p>I created this site to lorem ipsum chages the way provacy is viewed. Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+						<h3 class="bio-header">I’m Brendan Seaton, founder of Privacy Horizon. I believe that privacy is a good thing...something that we want for ourselves, our families and our friends.</h3>
+						<p>
+							I live in Toronto and have worked across Canada from coast to coast to coast helping health care organizations to manage privacy. Through my business partner, that National Institutes for Health Informatics, I have trained more than 1000 privacy officers. In 2013, I was designated as a Privacy by Design Ambassador by Dr. Ann Cavoukian, former Information and Privacy Commissioner for Ontario.
+						</p>
+						<p>
+							I work with a brilliant team of privacy, security, and IT risk specialists. We look forward to working with you as you make privacy real for your customers and clients.
+						</p>
 						<div class="about-twitter-bird-container">
 								<a href="http://twitter.com/brendanseaton" target="_blank"><img src="<?php echo get_bloginfo('template_url') ?>/images/about/twitterbird.svg"/></a>
 						</div>

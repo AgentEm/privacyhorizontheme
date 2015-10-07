@@ -79,3 +79,9 @@
 // 		}
 // 	}
 // } )();
+
+(function($) {
+  $('.mobile-menu-button').click(function() {
+      $('.nav-items-container').toggleClass('open');
+  });
+})( jQuery );

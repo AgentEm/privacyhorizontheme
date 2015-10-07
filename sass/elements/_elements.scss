@@ -9,14 +9,19 @@ html, body {
 
 html {
 	box-sizing: border-box;
-	@media (max-width: 1300px) { //783 to 1300px, regular desktop
+	font-size: 16px;
+	@media (max-width: $size__screen-large) { //768 to 1300px, regular desktop
 		border-top: 3px solid red;
+		border-top: 3px solid red;
+		font-size: 16px;
 	}
-	@media (max-width: 782px) { //401 to 782px, tablet
+	@media (max-width: $size__screen-medium) { //401 to 768px, larger phone, tablet
 		border-top: 3px solid green;
+		font-size: 14px;
 	}
-	@media (max-width: 400px) { //up to 400px, small mobile
+	@media (max-width: $size__screen-small) { //up to 400px, small mobile
 		border-top: 3px solid blue;
+		font-size: 12px;
 	}
 }
 

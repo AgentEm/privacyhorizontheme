@@ -22,10 +22,16 @@
 </head>
 
 <body <?php body_class(); ?>>
+
 	<nav id="site-navigation" class="main-navigation" role="navigation">
-		<!-- <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php// esc_html_e( 'Primary Menu', 'privacyhorisontheme' ); ?></button> -->
-		<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+		<div class="mobile-menu-button">
+			x
+		</div>
+		<div class="nav-items-container animated fadeIn">
+			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+		</div>
 	</nav><!-- #site-navigation -->
+
 <div id="page" class="hfeed site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'privacyhorisontheme' ); ?></a>
 
@@ -38,7 +44,7 @@
 			<section class="top-section contact-header">
 				<div class="page-content-container">
 					<h2>Let's chat!</h2>
-					<h3>Do you have questions, comments, or a collaboration opportunity? We'd love to hear from you! Please get in touch below, and we'll be in touch.</h3>
+					<h3>Do you have questions, comments, or a collaboration opportunity? We'd love to hear from you! Please get in touch below.</h3>
 				</div>
 			</section>
 		</header><!-- #masthead -->
