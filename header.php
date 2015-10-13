@@ -27,7 +27,7 @@
 		<div class="mobile-menu-button">
 			x
 		</div>
-		<div class="nav-items-container animated fadeIn">
+		<div class="nav-items-container">
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 		</div>
 	</nav><!-- #site-navigation -->
@@ -44,7 +44,7 @@
 			<section class="top-section contact-header">
 				<div class="page-content-container">
 					<h2>Let's chat!</h2>
-					<h3>Do you have questions, comments, or a collaboration opportunity? We'd love to hear from you! Please get in touch below.</h3>
+					<h3>Do you have a burning question about privacy? Do you want to know more about Privacy Horizon? Do you have a suggestion to help us improve our website or services? Please get in touch. We look forward to hearing from you.</h3>
 				</div>
 			</section>
 		</header><!-- #masthead -->
