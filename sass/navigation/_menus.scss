@@ -1,3 +1,5 @@
+//TODO: refactor this navigation, it's crazy repetitive and could be a lot more logically set up between the desktop and mobile versions...
+
 .main-navigation {
 	width: 8rem;
 	padding: 0.7rem 0;
@@ -10,50 +12,56 @@
 	z-index: 1;
 	img {
 		width: 35px;
+		@media (max-width: $size__screen-large) {
+			width: 20px;
+		}
 	}
 	.mobile-menu-button {
 		display: none;
 	}
-	&.bigger-menu {
-		width: 40%;
-		max-width: 40rem;
-		li {
-			position: relative;
-			text-align: left;
-			&:after {
-				padding-right: 3rem;
-				position: absolute;
-				top: 50%;
-				left: 10rem;
-				transform: translateY(-50%);
-				color: $color__link;
+	@media (min-width: $size__screen-large){
+		&.bigger-menu {
+			transition: width 0.5s ease-in-out;
+			width: 40%;
+			max-width: 40rem;
+			li {
+				position: relative;
+				text-align: left;
+				&:after {
+					padding-right: 3rem;
+					position: absolute;
+					top: 50%;
+					left: 10rem;
+					transform: translateY(-50%);
+					color: $color__link;
+				}
+				&.menu-item-76:after {
+					content: "";
+				}
+				&.menu-item-80:after {
+					content: "A wiki that links you to privacy best practices from around the world";
+				}
+				&.menu-item-28:after {
+					content: "An interactive discussion about topical privacy issues";
+				}
+				&.menu-item-29:after {
+					content: "Training, conferences, and certification for privacy professionals";
+				}
+				&.menu-item-30:after {
+					content: "Answers to your most common questions about privacy";
+				}
+				&.menu-item-31:after {
+					content: "What is Privacy Horizon?";
+				}
+				&.menu-item-32:after {
+					content: "Ask a question or make a suggestion";
+				}
 			}
-			&.menu-item-76:after {
-				content: "";
+			a {
+				display: inline-block;
+				padding-left: 3rem;
+				min-width: 8rem; //otherwise alignment of nav items goes off
 			}
-			&.menu-item-80:after {
-				content: "A wiki that links you to privacy best practices from around the world";
-			}
-			&.menu-item-28:after {
-				content: "An interactive discussion about topical privacy issues";
-			}
-			&.menu-item-29:after {
-				content: "Training, conferences, and certification for privacy professionals";
-			}
-			&.menu-item-30:after {
-				content: "Answers to your most common questions about privacy";
-			}
-			&.menu-item-31:after {
-				content: "What is Privacy Horizon?";
-			}
-			&.menu-item-32:after {
-				content: "Ask a question or make a suggestion";
-			}
-		}
-		a {
-			display: inline-block;
-			padding-left: 3rem;
-			min-width: 8rem; //otherwise alignment of nav items goes off
 		}
 	}
 	ul {
@@ -73,29 +81,82 @@
 		padding-bottom: 0.5em;
 	}
 	@media (max-width: $size__screen-large) {
-		width: 100%;
-		background-color: #fff;
+		width: 50%;
 		height: initial;
 		overflow-y: hidden;
+		padding: 0;
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+		float: right;
+		background-color: transparent;
 		.nav-items-container {
 			display: none;
 			border:1px solid green;
 			&.open {
 				display: block;
 				background-color: $color__lightgold;
+				position: fixed;
+				top:0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				z-index: 2;
+				a {
+					font-size: 1.5rem;
+				}
+				li {
+					text-align: center;
+					&:after {
+						color: $color__link;
+						font-size: 1.25rem;
+						display: block;
+						padding: 0 3rem;
+					}
+					&.menu-item-76 a {
+						text-align: right;
+					}
+					&.menu-item-76:after {
+						content: "";
+					}
+					&.menu-item-80:after {
+						content: "A wiki that links you to privacy best practices from around the world";
+					}
+					&.menu-item-28:after {
+						content: "An interactive discussion about topical privacy issues";
+					}
+					&.menu-item-29:after {
+						content: "Training, conferences, and certification for privacy professionals";
+					}
+					&.menu-item-30:after {
+						content: "Answers to your most common questions about privacy";
+					}
+					&.menu-item-31:after {
+						content: "What is Privacy Horizon?";
+					}
+					&.menu-item-32:after {
+						content: "Ask a question or make a suggestion";
+					}
+				}
 			}
 		}
 		.mobile-menu-button {
 			display: block;
-			color: red;
-			font-size: 2rem;
-			position: absolute;
-			top: 0;
-			right: 0;
+			font-size: 1.5rem;
+			text-align: right;
+			padding: 0 3rem;
+			p {
+				margin: 0;
+				margin-left: 10px;
+				line-height: 1;
+				display: inline-block;
+				color: $color__text-main;
+			}
 		}
 		a {
 			font-size: 1.25rem;
 			font-family: $font__heading;
+			display: inline-block;
 		}
 		.menu-item img._before {
 			display: none;

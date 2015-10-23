@@ -84,7 +84,7 @@
   //on click of the menu button, toggle making the menu larger width to show the navigation item descriptions.
   $('#menu-item-76 a').click(function() {
     if ($('.main-navigation').hasClass('bigger-menu')) {
-        $('.main-navigation').removeClass('bigger-menu');
+        $('.main-navigation').removeClass('bigger-menu').css('transition', 'width 0.5s ease-in-out');
     }else {
       $('.main-navigation').addClass('bigger-menu');
     }
@@ -92,5 +92,9 @@
 
   $('.mobile-menu-button').click(function() {
       $('.nav-items-container').toggleClass('open');
+      $('body').css('overflow', 'hidden');
   });
+
+  //when mobile nav .open, hide the mobile menu button OR restyle/reuse it for mobile nav?
+
 })( jQuery );

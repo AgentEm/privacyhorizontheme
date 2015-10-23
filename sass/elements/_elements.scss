@@ -3,11 +3,9 @@
 *:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
 	box-sizing: inherit;
 }
-html, body {
-	min-height: 100%;
-}
 
 html {
+	height: 100%;
 	box-sizing: border-box;
 	font-size: 16px;
 	@media (max-width: $size__screen-large) { //768 to 1300px, regular desktop
@@ -26,6 +24,7 @@ html {
 }
 
 body {
+	min-height: 100%;
 	background: $color__background-body; /* Fallback for when there is no custom background color defined. */
 }
 

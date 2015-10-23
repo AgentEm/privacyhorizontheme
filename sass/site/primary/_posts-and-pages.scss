@@ -43,10 +43,26 @@
 
 .site-header {
 	text-align: left;
+	@media (max-width: $size__screen-large) {
+		background-color: rgba(225, 225, 225, 0.5);
+		height: 5rem;
+	}
+}
+.site-branding {
+	@media (max-width: $size__screen-large) {
+		float: left;
+		width: 50%;
+	}
 }
 .site-title {
 	margin: 0;
 	padding: 1.5rem;
+	@media (max-width: $size__screen-large) {
+		padding: 0.5rem 3rem;
+	}
+}
+.site-logo {
+	vertical-align: top;
 }
 
 //********
@@ -65,12 +81,6 @@
 	}
 }
 
-.site-content, .site-info, .contact-header {
-	margin-right: 8rem;
-	@media (max-width: $size__screen-large) {
-		margin-right: 0;
-	}
-}
 //*******************
 //GENERAL PAGE STYLES
 //*******************
@@ -78,6 +88,15 @@
 .page-content-container {
 	width: 85%;
 	margin: 0 auto;
+}
+.site-content, .site-info, .contact-header {
+	margin-right: 8rem;
+	@media (max-width: $size__screen-large) {
+		margin-right: 0;
+	}
+}
+.site-content, .contact-header {
+	margin-top: 3rem;
 }
 
 section {
