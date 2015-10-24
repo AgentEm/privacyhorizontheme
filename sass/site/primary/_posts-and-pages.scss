@@ -405,12 +405,6 @@ input.ninja-forms-field:not(#ninja_forms_field_12), select.ninja-forms-field {
 		margin-bottom: 0.5rem;
 	}
 }
-.ninja-forms-response-msg {
-	border: 1px solid red;
-	&:after {
-		content:"success!";
-	}
-}
 //**********
 //BLOG
 //**********
