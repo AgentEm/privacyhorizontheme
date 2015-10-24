@@ -15,13 +15,16 @@ html {
 		font-size: 14px;
 	}
 	@media (max-width: $size__screen-small) { //up to 400px, small mobile
-		font-size: 12px;
+		font-size: 14px;
 	}
 }
 
 body {
 	min-height: 100%;
 	background: $color__background-body; /* Fallback for when there is no custom background color defined. */
+	&.stop-overflow {
+		overflow: hidden;
+	}
 }
 
 blockquote, q {

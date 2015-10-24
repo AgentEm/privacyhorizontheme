@@ -313,12 +313,14 @@ html {
       font-size: 14px; } }
   @media (max-width: 400px) {
     html {
-      font-size: 12px; } }
+      font-size: 14px; } }
 
 body {
   min-height: 100%;
   background: #fff;
   /* Fallback for when there is no custom background color defined. */ }
+  body.stop-overflow {
+    overflow: hidden; }
 
 blockquote, q {
   quotes: "" ""; }
@@ -541,8 +543,8 @@ a {
         float: initial; }
         .main-navigation.bigger-menu-mobile-alt .mobile-menu-button-alt {
           position: absolute;
-          top: 0;
-          right: 0;
+          top: 1rem;
+          right: 1.1rem;
           z-index: 3; }
       .main-navigation .nav-items-container {
         display: none; }
@@ -555,8 +557,8 @@ a {
           left: 0;
           right: 0;
           z-index: 2; }
-          .main-navigation .nav-items-container.open a {
-            font-size: 1.5rem; }
+          .main-navigation .nav-items-container.open ul {
+            padding-top: 4rem; }
           .main-navigation .nav-items-container.open li {
             text-align: center; }
             .main-navigation .nav-items-container.open li:after {
@@ -580,6 +582,8 @@ a {
               content: "What is Privacy Horizon?"; }
             .main-navigation .nav-items-container.open li.menu-item-32:after {
               content: "Ask a question or make a suggestion"; }
+          .main-navigation .nav-items-container.open a {
+            font-size: 1.5rem; }
       .main-navigation .mobile-menu-button {
         display: block;
         font-size: 1.5rem;
@@ -599,101 +603,6 @@ a {
       .main-navigation .menu-item img._before {
         display: none; } }
 
-/* 	ul {
-	display: none;
-	list-style: none;
-
-	ul {
-		box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-		float: left;
-		position: absolute;
-		top: 1.5em;
-		left: -999em;
-		z-index: 99999;
-
-		ul {
-			left: -999em;
-			top: 0;
-		}
-
-		li {
-			&:hover > ul,
-			&.focus > ul {
-				left: 100%;
-			}
-		}
-
-		a {
-			width: 200px;
-		}
-
-		:hover > a,
-		.focus > a {
-		}
-
-		a:hover,
-		a.focus {
-		}
-	}
-
-	li:hover > ul,
-	li.focus > ul {
-		left: auto;
-	}
-}
-li {
-	float: left;
-	position: relative;
-
-	&:hover > a,
-	&.focus > a {
-	}
-}
-a {
-	display: block;
-	text-decoration: none;
-}
-
-.current_page_item > a,
-.current-menu-item > a,
-.current_page_ancestor > a {
-} */
-/* Small menu. */
-/* .menu-toggle,
-.main-navigation.toggled ul {
-	display: block;
-}
-
-@media screen and (min-width: 37.5em) {
-	.menu-toggle {
-		display: none;
-	}
-	.main-navigation ul {
-		display: block;
-	}
-}
-
-.comment-navigation,
-.posts-navigation,
-.post-navigation {
-
-	.site-main & {
-		margin: 0 0 1.5em;
-		overflow: hidden;
-	}
-
-	& .nav-previous {
-		float: left;
-		width: 50%;
-	}
-
-	& .nav-next {
-		float: right;
-		text-align: right;
-		width: 50%;
-	}
-}
- */
 /*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
@@ -3003,10 +2912,14 @@ Copyright (c) 2015 Daniel Eden
     .site-header, .site-header-alternate {
       background-color: rgba(225, 225, 225, 0.5); } }
 
-@media (max-width: 1024px) {
-  .site-branding {
-    float: left;
-    width: 50%; } }
+.site-branding {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%); }
+  @media (max-width: 1024px) {
+    .site-branding {
+      float: left;
+      width: 50%; } }
 
 .site-title {
   margin: 0;
@@ -3146,7 +3059,12 @@ body.home {
   list-style-type: none;
   width: 80%;
   font-size: 1.1rem;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding: 0; }
+  @media (max-width: 1024px) {
+    .about-page section.site-intro .about-list {
+      width: 100%;
+      font-size: 1.3rem; } }
   .about-page section.site-intro .about-list li {
     padding: 0.5rem 1rem; }
   .about-page section.site-intro .about-list li:nth-child(odd) {
@@ -3181,7 +3099,7 @@ body.home {
     padding-bottom: 3.125rem; }
   .about-page section.brendan-bio p {
     margin: 0;
-    padding-bottom: 5rem; }
+    padding-bottom: 3.125rem; }
   .about-page section.brendan-bio .rotatingtweets .rtw_main {
     font-size: 1.375rem;
     padding-bottom: 0 !important; }
@@ -3271,6 +3189,23 @@ input.ninja-forms-field:not(#ninja_forms_field_12), select.ninja-forms-field {
 
 .ninja-forms-field-error {
   display: none !important; }
+
+.ninja-forms-error-msg p {
+  color: #F15A5A;
+  margin: 0;
+  font-size: 1.3rem;
+  padding: 0.5rem; }
+  .ninja-forms-error-msg p:last-child {
+    margin-bottom: 0.5rem; }
+
+.ninja-forms-response-msg {
+  border: 1px solid red; }
+  .ninja-forms-response-msg:after {
+    content: "success!"; }
+
+body.blog p {
+  padding: 0.8rem 0;
+  margin: 0; }
 
 /*--------------------------------------------------------------
 ## Asides
