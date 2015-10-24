@@ -41,11 +41,11 @@
 //HEADER
 //********
 
-.site-header {
+.site-header, .site-header-alternate {
 	text-align: left;
+	height: 5rem;
 	@media (max-width: $size__screen-large) {
 		background-color: rgba(225, 225, 225, 0.5);
-		height: 5rem;
 	}
 }
 .site-branding {
@@ -95,7 +95,7 @@
 		margin-right: 0;
 	}
 }
-.site-content, .contact-header {
+.site-content {
 	margin-top: 3rem;
 }
 
@@ -292,22 +292,24 @@ body.home {
 //********
 //CONTACT PAGE
 //********
-.site-header-alternate {
-	background: url(images/contact/contactimage.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-	section.top-section {
-		h2, h3 {
-			color: #fff;
-		}
-		h3 {
-			padding-bottom: 4rem;
-		}
+
+body.page-id-18 {
+  background: url("images/Contact/contactimage.jpg") no-repeat;
+}
+.contact-header {
+	margin-top: 2rem;
+}
+section.contact-blurb {
+	color: #fff;
+	height: calc(430px - 7rem);
+	h2 {
+		color: #fff;
+		margin-bottom: 1rem;
+	}
+	p {
+		margin: 0;
 	}
 }
-
 section.contact-form {
 	padding: 4.375rem 0;
 }

@@ -307,16 +307,12 @@ html {
   font-size: 16px; }
   @media (max-width: 1024px) {
     html {
-      border-top: 3px solid red;
-      border-top: 3px solid red;
       font-size: 16px; } }
   @media (max-width: 768px) {
     html {
-      border-top: 3px solid green;
       font-size: 14px; } }
   @media (max-width: 400px) {
     html {
-      border-top: 3px solid blue;
       font-size: 12px; } }
 
 body {
@@ -366,6 +362,9 @@ h1 {
 
 a, a:active, a:focus {
   outline: none !important; }
+
+p {
+  padding: 1.875rem; }
 
 table {
   margin: 0 0 1.5em;
@@ -462,7 +461,11 @@ a {
   top: 0;
   right: 0;
   overflow-y: auto;
-  z-index: 1; }
+  z-index: 1;
+  transition: width 0.5s ease-in-out; }
+  @media (max-width: 1024px) {
+    .main-navigation {
+      transition: initial; } }
   .main-navigation img {
     width: 35px; }
     @media (max-width: 1024px) {
@@ -527,9 +530,22 @@ a {
       transform: translateY(-50%);
       float: right;
       background-color: transparent; }
+      .main-navigation.bigger-menu-mobile-alt {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        transform: initial;
+        float: initial; }
+        .main-navigation.bigger-menu-mobile-alt .mobile-menu-button-alt {
+          position: absolute;
+          top: 0;
+          right: 0;
+          z-index: 3; }
       .main-navigation .nav-items-container {
-        display: none;
-        border: 1px solid green; }
+        display: none; }
         .main-navigation .nav-items-container.open {
           display: block;
           background-color: #F2CD65;
@@ -548,8 +564,8 @@ a {
               font-size: 1.25rem;
               display: block;
               padding: 0 3rem; }
-            .main-navigation .nav-items-container.open li.menu-item-76 a {
-              text-align: right; }
+            .main-navigation .nav-items-container.open li.menu-item-76 {
+              display: none; }
             .main-navigation .nav-items-container.open li.menu-item-76:after {
               content: ""; }
             .main-navigation .nav-items-container.open li.menu-item-80:after {
@@ -572,6 +588,7 @@ a {
         .main-navigation .mobile-menu-button p {
           margin: 0;
           margin-left: 10px;
+          padding: 0;
           line-height: 1;
           display: inline-block;
           color: #4A4A4A; }
@@ -2979,12 +2996,12 @@ Copyright (c) 2015 Daniel Eden
 .hfeed {
   width: 100%; }
 
-.site-header {
-  text-align: left; }
+.site-header, .site-header-alternate {
+  text-align: left;
+  height: 5rem; }
   @media (max-width: 1024px) {
-    .site-header {
-      background-color: rgba(225, 225, 225, 0.5);
-      height: 5rem; } }
+    .site-header, .site-header-alternate {
+      background-color: rgba(225, 225, 225, 0.5); } }
 
 @media (max-width: 1024px) {
   .site-branding {
@@ -3020,7 +3037,7 @@ Copyright (c) 2015 Daniel Eden
     .site-content, .site-info, .contact-header {
       margin-right: 0; } }
 
-.site-content, .contact-header {
+.site-content {
   margin-top: 3rem; }
 
 section {
@@ -3171,16 +3188,20 @@ body.home {
   .about-page section.brendan-bio .rotatingtweets .rtw_meta {
     font-size: 1rem; }
 
-.site-header-alternate {
-  background: url(images/contact/contactimage.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; }
-  .site-header-alternate section.top-section h2, .site-header-alternate section.top-section h3 {
-    color: #fff; }
-  .site-header-alternate section.top-section h3 {
-    padding-bottom: 4rem; }
+body.page-id-18 {
+  background: url("images/Contact/contactimage.jpg") no-repeat; }
+
+.contact-header {
+  margin-top: 2rem; }
+
+section.contact-blurb {
+  color: #fff;
+  height: calc(430px - 7rem); }
+  section.contact-blurb h2 {
+    color: #fff;
+    margin-bottom: 1rem; }
+  section.contact-blurb p {
+    margin: 0; }
 
 section.contact-form {
   padding: 4.375rem 0; }

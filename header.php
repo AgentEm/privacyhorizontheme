@@ -26,45 +26,22 @@
 <div id="page" class="hfeed site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'privacyhorisontheme' ); ?></a>
 
-	<?php if(is_page('contact')) : ?>
-		<header id="masthead" class="site-header-alternate" role="banner">
-			<nav id="site-navigation" class="main-navigation" role="navigation">
-				<div class="mobile-menu-button">
-					<a href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/MobileNavigation/Hamburger.svg" alt="menu burger" /></a>
-				</div>
-				</div>
-				<div class="nav-items-container">
-					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-				</div>
-			</nav><!-- #site-navigation -->
-			<div class="site-branding">
-				<h1 class="site-title">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img class="site-logo" src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo.svg" alt="privacy horizon logo" /></a></h1>
-			</div><!-- .site-branding -->
-
-			<section class="top-section contact-header">
-				<div class="page-content-container">
-					<h2>Let's chat!</h2>
-					<h3>Do you have a burning question about privacy? Do you want to know more about Privacy Horizon? Do you have a suggestion to help us improve our website or services? Please get in touch. We look forward to hearing from you.</h3>
-				</div>
-			</section>
-		</header><!-- #masthead -->
-	<?php else : ?>
-		<header id="masthead" class="site-header" role="banner">
-			<nav id="site-navigation" class="main-navigation" role="navigation">
-				<div class="mobile-menu-button">
-					<a href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/MobileNavigation/Hamburger.svg" alt="menu burger" /><p>Menu</p>
-					</a>
-				</div>
-				<div class="nav-items-container">
-					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-				</div>
-			</nav><!-- #site-navigation -->
-			<div class="site-branding">
-				<h1 class="site-title">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img class="site-logo" src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo.svg" alt="privacy horizon logo" /></a></h1>
-			</div><!-- .site-branding -->
-		</header><!-- #masthead -->
-	<?php endif; ?>
+	<header id="masthead" class="site-header" role="banner">
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<div class="mobile-menu-button">
+				<a href="#">
+					<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/MobileNavigation/Hamburger.svg" alt="menu burger" />
+					<p>Menu</p>
+				</a>
+			</div>
+			<div class="nav-items-container">
+				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+			</div>
+		</nav><!-- #site-navigation -->
+		<div class="site-branding">
+			<h1 class="site-title">
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img class="site-logo" src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo.svg" alt="privacy horizon logo" /></a></h1>
+		</div><!-- .site-branding -->
+	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">

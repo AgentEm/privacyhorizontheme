@@ -82,17 +82,29 @@
 
 (function($) {
   //on click of the menu button, toggle making the menu larger width to show the navigation item descriptions.
+  //bigger-menu is the slightly larger menu on desktop with descriptions of each nav item
   $('#menu-item-76 a').click(function() {
     if ($('.main-navigation').hasClass('bigger-menu')) {
-        $('.main-navigation').removeClass('bigger-menu').css('transition', 'width 0.5s ease-in-out');
+        $('.main-navigation').removeClass('bigger-menu');
     }else {
       $('.main-navigation').addClass('bigger-menu');
     }
   });
 
-  $('.mobile-menu-button').click(function() {
+//bigger-menu-mobile-alt is the full-page mobile nav
+  $('.mobile-menu-button a').click(function() {
       $('.nav-items-container').toggleClass('open');
       $('body').css('overflow', 'hidden');
+
+      if ($('.nav-items-container').hasClass('open')) {
+        $('.mobile-menu-button').addClass('mobile-menu-button-alt');
+      }
+
+      if ($('.main-navigation').hasClass('bigger-menu-mobile-alt')) {
+          $('.main-navigation').removeClass('bigger-menu-mobile-alt');
+      }else {
+        $('.main-navigation').addClass('bigger-menu-mobile-alt');
+      }
   });
 
   //when mobile nav .open, hide the mobile menu button OR restyle/reuse it for mobile nav?
