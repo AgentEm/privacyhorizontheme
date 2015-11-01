@@ -76,8 +76,12 @@
 	background-color: $color__lightblue;
 	text-align: center;
 	padding: 0.625rem 0;
+	.site-content {
+		max-width: 70rem;
+    margin: 0 auto;
+	}
 	a {
-		margin: 0 4.375rem;
+		margin: 0 5%;
 	}
 	img {
 		vertical-align: bottom;
@@ -302,14 +306,21 @@ body.home {
 //********
 
 body.page-id-18 {
-  background: url("images/Contact/contactimage.jpg") no-repeat;
+	.site-content {
+		margin-top: 0;
+	}
 }
 .contact-header {
 	margin-top: 2rem;
 }
 section.contact-blurb {
 	color: #fff;
-	height: calc(430px - 7rem);
+	background: url("images/Contact/contactimage.jpg") no-repeat;
+	background-size: cover;
+	padding: 7rem 0;
+	.contact-blurb-container {
+
+	}
 	h2 {
 		color: #fff;
 		margin-bottom: 1rem;

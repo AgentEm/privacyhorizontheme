@@ -5,8 +5,10 @@
 
 			<?php while ( have_posts() ) : the_post(); ?>
 				<section class="contact-blurb">
-					<h2>Let's chat!</h2>
-					<p>Do you have a burning question about privacy? Do you want to know more about Privacy Horizon? Do you have a suggestion to help us improve our website or services? Please get in touch.</p>
+					<div class="page-content-container">
+						<h2>Let's chat!</h2>
+						<p>Do you have a burning question about privacy? Do you want to know more about Privacy Horizon? Do you have a suggestion to help us improve our website or services? Please get in touch.</p>
+					</div>
 				</section>
         <section class="contact-form" id="form">
 					<div class="page-content-container">

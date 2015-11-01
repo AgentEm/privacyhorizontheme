@@ -2935,8 +2935,11 @@ Copyright (c) 2015 Daniel Eden
   background-color: #21BEE9;
   text-align: center;
   padding: 0.625rem 0; }
+  .site-footer .site-content {
+    max-width: 70rem;
+    margin: 0 auto; }
   .site-footer a {
-    margin: 0 4.375rem; }
+    margin: 0 5%; }
   .site-footer img {
     vertical-align: bottom; }
 
@@ -3106,15 +3109,17 @@ body.home {
   .about-page section.brendan-bio .rotatingtweets .rtw_meta {
     font-size: 1rem; }
 
-body.page-id-18 {
-  background: url("images/Contact/contactimage.jpg") no-repeat; }
+body.page-id-18 .site-content {
+  margin-top: 0; }
 
 .contact-header {
   margin-top: 2rem; }
 
 section.contact-blurb {
   color: #fff;
-  height: calc(430px - 7rem); }
+  background: url("images/Contact/contactimage.jpg") no-repeat;
+  background-size: cover;
+  padding: 7rem 0; }
   section.contact-blurb h2 {
     color: #fff;
     margin-bottom: 1rem; }
