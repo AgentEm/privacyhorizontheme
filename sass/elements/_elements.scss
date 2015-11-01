@@ -23,7 +23,9 @@ body {
 	min-height: 100%;
 	background: $color__background-body; /* Fallback for when there is no custom background color defined. */
 	&.stop-overflow {
-		overflow: hidden;
+		@media(max-width: $size__screen-large) {
+			overflow: hidden;			
+		}
 	}
 }
 

@@ -319,8 +319,9 @@ body {
   min-height: 100%;
   background: #fff;
   /* Fallback for when there is no custom background color defined. */ }
-  body.stop-overflow {
-    overflow: hidden; }
+  @media (max-width: 1024px) {
+    body.stop-overflow {
+      overflow: hidden; } }
 
 blockquote, q {
   quotes: "" ""; }
