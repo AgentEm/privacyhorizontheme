@@ -466,23 +466,20 @@ a {
   overflow-y: auto;
   z-index: 1;
   transition: width 0.5s ease-in-out; }
-  .main-navigation img {
-    width: 35px; }
-    @media (max-width: 1024px) {
-      .main-navigation img {
-        width: 20px; } }
   .main-navigation .mobile-menu-button {
     display: none; }
   .main-navigation .nav-open {
     border: 2px solid #847035;
-    height: 35px;
+    height: 2.1875rem;
     position: relative;
     display: block;
     margin: 0 auto;
-    width: 35px; }
+    width: 2.1875rem; }
     @media (max-width: 1024px) {
-      .main-navigation .nav-open.desktop-menu {
-        display: none; } }
+      .main-navigation .nav-open {
+        border-color: #4A4A4A; }
+        .main-navigation .nav-open.desktop-menu {
+          display: none; } }
     .main-navigation .nav-open .inner, .main-navigation .nav-open .inner::before, .main-navigation .nav-open .inner::after {
       background-color: #847035;
       content: "";
@@ -490,6 +487,9 @@ a {
       height: 2px;
       width: 14px;
       transition: all .5s ease; }
+      @media (max-width: 1024px) {
+        .main-navigation .nav-open .inner, .main-navigation .nav-open .inner::before, .main-navigation .nav-open .inner::after {
+          background-color: #4A4A4A; } }
     .main-navigation .nav-open .inner {
       left: 50%;
       position: absolute;
@@ -2964,7 +2964,7 @@ Copyright (c) 2015 Daniel Eden
   padding: 1.5rem; }
   @media (max-width: 1024px) {
     .site-title {
-      padding: 0.5rem 3rem; } }
+      padding: 0.5rem 2rem; } }
 
 .site-logo {
   vertical-align: top; }

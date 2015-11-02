@@ -11,23 +11,18 @@
 	overflow-y: auto;
 	z-index: 1;
 	transition: width 0.5s ease-in-out;
-	img {
-		width: 35px;
-		@media (max-width: $size__screen-large) {
-			width: 20px;
-		}
-	}
 	.mobile-menu-button {
 		display: none;
 	}
 	.nav-open {
 	  border: 2px solid $color__link;
-	  height: 35px;
+	  height: 2.1875rem;
 		position: relative;
 		display: block;
 		margin: 0 auto;
-	  width: 35px;
+	  width: 2.1875rem;
 		@media(max-width: $size__screen-large){
+			border-color: $color__text-main;
 			&.desktop-menu {
 				display: none;
 			}
@@ -39,6 +34,9 @@
 	    height: 2px;
 	    width: 14px;
 	    transition: all .5s ease;
+			@media(max-width: $size__screen-large){
+				background-color: $color__text-main;
+			}
 	  }
 	  .inner {
 	    left: 50%;
@@ -55,18 +53,15 @@
 	    }
 	  }
 	}
-
 	.nav-open.nav-close {
 	  .inner {
 	    background-color: transparent;
 	    left: 54%;
-
 	    &::before, &::after {
 	      transform: rotate(45deg);
 	      transform-origin: 0 50%;
 	      width: 17px;
 	    }
-
 	    &::after {
 	      transform: rotate(-45deg);
 	    }
@@ -238,56 +233,3 @@
 		}
 	}
 }
-//codepen nav button
-// .nav-open {
-//   border: 3px solid white;
-//   height: 30px;
-//   left: 50%;
-//   position: absolute;
-//   top: 50%;
-//   transform: translate(-50%, -50%);
-//   width: 30px;
-//
-//   .inner, .inner::before, .inner::after {
-//     background-color: white;
-//     content: "";
-//     display: block;
-//     height: 3px;
-//     width: 14px;
-//     transition: all .5s ease;
-//   }
-//
-//   .inner {
-//     left: 50%;
-//     position: absolute;
-//     top: 50%;
-//     transform: translate(-50%, -50%);
-//
-//     &::before {
-//       margin-top: -6px;
-//       position: absolute;
-//     }
-//
-//     &::after {
-//       margin-top: 6px;
-//       position: absolute;
-//     }
-//   }
-// }
-//
-// .nav-open.nav-close {
-//   .inner {
-//     background-color: transparent;
-//     left: 54%;
-//
-//     &::before, &::after {
-//       transform: rotate(45deg);
-//       transform-origin: 0 50%;
-//       width: 17px;
-//     }
-//
-//     &::after {
-//       transform: rotate(-45deg);
-//     }
-//   }
-// }
