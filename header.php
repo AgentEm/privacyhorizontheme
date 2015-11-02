@@ -29,12 +29,15 @@
 	<header id="masthead" class="site-header" role="banner">
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<div class="mobile-menu-button">
-				<a href="#">
-					<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/MobileNavigation/Hamburger.svg" alt="menu burger" />
-					<p>Menu</p>
-				</a>
+					<a href="#" class="nav-open">
+  					<div class="inner"></div>
+						<p>Menu</p>
+					</a>
 			</div>
 			<div class="nav-items-container">
+				<a href="#" class="nav-open desktop-menu">
+					<div class="inner"></div>
+				</a>
 				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 			</div>
 		</nav><!-- #site-navigation -->

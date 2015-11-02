@@ -11,9 +11,6 @@
 	overflow-y: auto;
 	z-index: 1;
 	transition: width 0.5s ease-in-out;
-	@media (max-width: $size__screen-large) {
-		transition: initial;
-	}
 	img {
 		width: 35px;
 		@media (max-width: $size__screen-large) {
@@ -22,6 +19,58 @@
 	}
 	.mobile-menu-button {
 		display: none;
+	}
+	.nav-open {
+	  border: 2px solid $color__link;
+	  height: 35px;
+		position: relative;
+		display: block;
+		margin: 0 auto;
+	  width: 35px;
+		@media(max-width: $size__screen-large){
+			&.desktop-menu {
+				display: none;
+			}
+		}
+	  .inner, .inner::before, .inner::after {
+	    background-color: $color__link;
+	    content: "";
+	    display: block;
+	    height: 2px;
+	    width: 14px;
+	    transition: all .5s ease;
+	  }
+	  .inner {
+	    left: 50%;
+	    position: absolute;
+	    top: 50%;
+	    transform: translate(-50%, -50%);
+	    &::before {
+	      margin-top: -6px;
+	      position: absolute;
+	    }
+	    &::after {
+	      margin-top: 6px;
+	      position: absolute;
+	    }
+	  }
+	}
+
+	.nav-open.nav-close {
+	  .inner {
+	    background-color: transparent;
+	    left: 54%;
+
+	    &::before, &::after {
+	      transform: rotate(45deg);
+	      transform-origin: 0 50%;
+	      width: 17px;
+	    }
+
+	    &::after {
+	      transform: rotate(-45deg);
+	    }
+	  }
 	}
 	@media (min-width: $size__screen-large){
 		&.bigger-menu {
@@ -38,9 +87,6 @@
 					left: 10rem;
 					transform: translateY(-50%);
 					color: $color__link;
-				}
-				&.menu-item-76:after {
-					content: "";
 				}
 				&.menu-item-80:after {
 					content: "A wiki that links you to privacy best practices from around the world";
@@ -61,10 +107,13 @@
 					content: "Ask a question or make a suggestion";
 				}
 			}
-			a {
+			a:not(.nav-open) {
 				display: inline-block;
 				padding-left: 3rem;
 				min-width: 8rem; //otherwise alignment of nav items goes off
+			}
+			a.nav-open {
+				margin: 0 0 0 4rem;
 			}
 		}
 	}
@@ -73,7 +122,7 @@
 		margin: 0;
 		padding: 0;
 	}
-	a {
+	a:not(.nav-open) {
 		text-decoration: none;
 		display: block;
 		text-align: center;
@@ -85,7 +134,7 @@
 		padding-bottom: 0.5em;
 	}
 	@media (max-width: $size__screen-large) {
-		width: 50%;
+		width: 13rem;
 		height: initial;
 		overflow-y: hidden;
 		padding: 0;
@@ -94,6 +143,7 @@
 		transform: translateY(-50%);
 		float: right;
 		background-color: transparent;
+		transition: initial;
 		&.bigger-menu-mobile-alt {
 			position: absolute;
 			top: 0;
@@ -103,10 +153,11 @@
 			width: 100%;
 			transform: initial;
 			float: initial;
+			overflow-x: hidden;
 			.mobile-menu-button-alt {
 				position: absolute;
 				top: 1rem;
-				right: 1.1rem;
+				right: 6rem;
 				z-index: 3;
 			}
 		}
@@ -121,8 +172,9 @@
 				left: 0;
 				right: 0;
 				z-index: 2;
+				overflow-y: auto;
 				ul {
-					padding-top: 4rem;
+					padding: 4rem 0;
 				}
 				li {
 					text-align: center;
@@ -132,11 +184,9 @@
 						display: block;
 						padding: 0 3rem;
 					}
+					//desktop menu label
 					&.menu-item-76 {
 						display: none;
-					}
-					&.menu-item-76:after {
-						content: "";
 					}
 					&.menu-item-80:after {
 						content: "A wiki that links you to privacy best practices from around the world";
@@ -165,15 +215,17 @@
 		.mobile-menu-button {
 			display: block;
 			font-size: 1.5rem;
-			text-align: right;
-			padding: 0 3rem;
+			padding: 0;
 			p {
 				margin: 0;
-				margin-left: 10px;
+				margin-left: 3.125rem;
 				padding: 0;
 				line-height: 1;
 				display: inline-block;
+				position: absolute;
+				top: 0.7rem;
 				color: $color__text-main;
+				vertical-align: bottom;
 			}
 		}
 		a {
@@ -186,3 +238,56 @@
 		}
 	}
 }
+//codepen nav button
+// .nav-open {
+//   border: 3px solid white;
+//   height: 30px;
+//   left: 50%;
+//   position: absolute;
+//   top: 50%;
+//   transform: translate(-50%, -50%);
+//   width: 30px;
+//
+//   .inner, .inner::before, .inner::after {
+//     background-color: white;
+//     content: "";
+//     display: block;
+//     height: 3px;
+//     width: 14px;
+//     transition: all .5s ease;
+//   }
+//
+//   .inner {
+//     left: 50%;
+//     position: absolute;
+//     top: 50%;
+//     transform: translate(-50%, -50%);
+//
+//     &::before {
+//       margin-top: -6px;
+//       position: absolute;
+//     }
+//
+//     &::after {
+//       margin-top: 6px;
+//       position: absolute;
+//     }
+//   }
+// }
+//
+// .nav-open.nav-close {
+//   .inner {
+//     background-color: transparent;
+//     left: 54%;
+//
+//     &::before, &::after {
+//       transform: rotate(45deg);
+//       transform-origin: 0 50%;
+//       width: 17px;
+//     }
+//
+//     &::after {
+//       transform: rotate(-45deg);
+//     }
+//   }
+// }
