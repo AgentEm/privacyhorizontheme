@@ -3267,6 +3267,18 @@ input.ninja-forms-field:not(#ninja_forms_field_12), select.ninja-forms-field {
 :-ms-input-placeholder {
   color: #646464; }
 
+body.page-id-93 .site-content {
+  margin-top: 0; }
+
+.toolkit-page {
+  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(images/construction.jpg) no-repeat 50% 60%;
+  text-align: center;
+  height: 100vh; }
+  .toolkit-page .page-content-container {
+    padding-top: 5rem; }
+  .toolkit-page h3 {
+    color: #4A4A4A; }
+
 body.blog p {
   padding: 0.8rem 0;
   margin: 0; }

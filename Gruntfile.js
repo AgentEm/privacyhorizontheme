@@ -1,6 +1,7 @@
 module.exports = function(grunt) {
 
-    grunt.initConfig({
+  grunt.initConfig({
+    pkg: grunt.file.readJSON('package.json'),
     postcss: {
       options: {
         map: true, // inline sourcemaps
@@ -16,4 +17,6 @@ module.exports = function(grunt) {
     }
   });
   grunt.loadNpmTasks('grunt-postcss');
+
+  grunt.registerTask('default', ['grunt-postcss']);
 };

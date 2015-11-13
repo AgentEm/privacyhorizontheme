@@ -4,10 +4,10 @@
 		<main id="main" class="site-main" role="main">
 
 			<?php while ( have_posts() ) : the_post(); ?>
-				<div class="page-content-container">
-					<h2>Toolkit!</h2>
-					<p>Dblah</p>
-				</div>
+				<section class="page-content-container">
+					<h2>Privacy Toolkit</h2>
+					<h3>Coming soon!<h3>
+				</section>
 			<?php endwhile; // End of the loop. ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->

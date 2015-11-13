@@ -24,7 +24,7 @@ body {
 	background: $color__background-body; /* Fallback for when there is no custom background color defined. */
 	&.stop-overflow {
 		@media(max-width: $size__screen-large) {
-			overflow: hidden;			
+			overflow: hidden;
 		}
 	}
 }
