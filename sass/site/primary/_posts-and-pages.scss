@@ -103,6 +103,7 @@
 }
 .site-content, .site-info, .contact-header {
 	margin-right: 8rem;
+	border:1px solid green;
 	@media (max-width: $size__screen-large) {
 		margin-right: 0;
 	}
