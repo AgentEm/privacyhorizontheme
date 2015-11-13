@@ -95,6 +95,11 @@
 .page-content-container {
 	width: 85%;
 	margin: 0 auto;
+	border: 1px solid red;
+	@media (max-width: $size__screen-medium) {
+		width: 95%;
+		border: 1px solid green;
+	}
 }
 .site-content, .site-info, .contact-header {
 	margin-right: 8rem;
@@ -368,9 +373,7 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
 		box-shadow: none;
 	}
 }
-input.ninja-forms-field:not(#ninja_forms_field_12), select.ninja-forms-field {
-	color: #979797;
-}
+
 .ninja-forms-form-wrap input, .ninja-forms-form-wrap select, .ninja-forms-form-wrap textarea {
 	-webkit-appearance: none;
 	-moz-appearance: none;
@@ -378,8 +381,8 @@ input.ninja-forms-field:not(#ninja_forms_field_12), select.ninja-forms-field {
 	padding: 5px 15px;
 	height: 40px !important;
 	border-radius: 0;
-	background: #f3f3f3;
-	border: 1px solid darken(#f3f3f3, 10);
+	background: $color__form-background;
+	border: 1px solid darken($color__form-background, 10);
 	font-size: 1.125rem;
 }
 .ninja-forms-form-wrap {
@@ -388,10 +391,11 @@ input.ninja-forms-field:not(#ninja_forms_field_12), select.ninja-forms-field {
 		min-height: 200px;
 		padding: 1rem;
 		width: 100%;
-		color: #979797;
+		color: #646464;
 	}
 	select {
-		background: url("images/contact/downarrow.svg") no-repeat 96% #f3f3f3;
+		background: url("images/contact/downarrow.svg") no-repeat 96% $color__form-background;
+		width: 100% !important;
 	}
 	.submit-wrap {
 		float: right;
@@ -415,6 +419,21 @@ input.ninja-forms-field:not(#ninja_forms_field_12), select.ninja-forms-field {
 	&:last-child {
 		margin-bottom: 0.5rem;
 	}
+}
+input.ninja-forms-field:not(#ninja_forms_field_12), select.ninja-forms-field {
+	color: $color__form-text;
+}
+::-webkit-input-placeholder {
+   color: $color__form-text;
+}
+:-moz-placeholder { /* Firefox 18- */
+   color: $color__form-text;
+}
+::-moz-placeholder {  /* Firefox 19+ */
+   color: $color__form-text;
+}
+:-ms-input-placeholder {
+   color: $color__form-text;
 }
 //**********
 //BLOG
