@@ -298,6 +298,13 @@ h1, h2, h3, h4, h5, h6 {
   padding-right: 2rem;
 }
 
+@media (max-width: 768px) {
+  h1, h2, h3, h4, h5, h6 {
+    padding-left: 0rem;
+    padding-right: 0rem;
+  }
+}
+
 p {
   margin-bottom: 1.5em;
 }
@@ -3944,15 +3951,9 @@ Copyright (c) 2015 Daniel Eden
   margin: 0 1rem 1.5em;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .hentry {
-    margin: 0 4rem 1.5em;
-  }
-}
-
-@media (min-width: 768px) {
-  .hentry {
-    margin: 0 6rem 1.5em;
+    margin: 0 4rem 1.5rem;
   }
 }
 
@@ -4043,19 +4044,16 @@ Copyright (c) 2015 Daniel Eden
 .page-content-container {
   width: 85%;
   margin: 0 auto;
-  border: 1px solid red;
 }
 
 @media (max-width: 768px) {
   .page-content-container {
     width: 95%;
-    border: 1px solid green;
   }
 }
 
 .site-content, .site-info, .contact-header {
   margin-right: 8rem;
-  border: 1px solid green;
 }
 
 @media (max-width: 1024px) {
@@ -4155,11 +4153,18 @@ body.home .entry-content p {
 body.home .home-badge {
   display: inline-block;
   padding: 3rem 5%;
+  width: 15rem;
 }
 
 @media (max-width: 1024px) {
   body.home .home-badge {
-    width: 25%;
+    width: 13rem;
+  }
+}
+
+@media (max-width: 768px) {
+  body.home .home-badge {
+    width: 30%;
   }
 }
 
@@ -4168,9 +4173,15 @@ body.home .site-footer {
 }
 
 .mtphr-dnt {
-  width: 65%;
+  width: 75%;
   margin: 0 auto;
   font-size: 1.5rem;
+}
+
+@media (max-width: 1024px) {
+  .mtphr-dnt {
+    width: 100%;
+  }
 }
 
 .mtphr-dnt a {
@@ -4247,13 +4258,13 @@ body.home .site-footer {
 
 .about-page section.site-intro .navigate-down {
   margin: 0;
-  font-size: 1.25rem;
+  font-size: 2rem;
   color: #F15A5A;
 }
 
 @media (max-width: 1024px) {
   .about-page section.site-intro .navigate-down {
-    font-size: 1rem;
+    font-size: 1.75rem;
   }
 }
 
