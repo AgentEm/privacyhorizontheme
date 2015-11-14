@@ -20,7 +20,7 @@ html {
 }
 
 body {
-	min-height: 100%;
+	min-height: 100vh;
 	background: $color__background-body; /* Fallback for when there is no custom background color defined. */
 	&.stop-overflow {
 		@media(max-width: $size__screen-large) {

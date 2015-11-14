@@ -17,8 +17,8 @@ get_header(); ?>
 					<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'privacyhorisontheme' ); ?></h1>
 				</header><!-- .page-header -->
 
-				<div class="page-content">
-					<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'privacyhorisontheme' ); ?></p>
+				<div class="page-content page-content-container">
+					<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try a search?', 'privacyhorisontheme' ); ?></p>
 
 					<?php get_search_form(); ?>
 
