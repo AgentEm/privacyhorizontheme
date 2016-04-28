@@ -39,14 +39,6 @@
 						<p>
 							I work with a brilliant team of privacy, security, and IT risk specialists. We look forward to working with you as you make privacy real for your customers and clients.
 						</p>
-						<div class="about-twitter-bird-container">
-								<a href="http://twitter.com/brendanseaton" target="_blank"><img src="<?php echo get_bloginfo('template_url') ?>/images/about/twitterbird.svg"/></a>
-						</div>
-						<div class="contain-tweets">
-							<?php
-								echo do_shortcode("[rotatingtweets screen_name='brendanseaton' exclude_replies='1' timeout='7000' rotation_type='fade' show_tco_link='1' show_meta_timestamp='0' show_meta_screen_name='0' show_meta_via='0' show_meta_reply_retweet_favorite='1']");
-							?>
-						</div>
 					</div>
         </section>
 			<?php endwhile; // End of the loop. ?>
